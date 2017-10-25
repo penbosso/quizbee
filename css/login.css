@@ -1,0 +1,36 @@
+#logo_txt {
+    font-style: italic;
+    font-size: bold;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+    margin-left: 35%;
+    color: orange;
+}
+
+body {
+    background-image: url("../img/quiz.jpg");
+}
+
+.top {
+    width: 100%;
+    height: 15%;
+    background-color: #504b91;
+}
+
+.login {
+    float: right;
+    margin-top: 2.3%;
+    margin-right: 5%;
+}
+
+.signup {
+    float: right;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+td{
+    margin: 8px;
+    padding: 8px;
+}
