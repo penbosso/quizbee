@@ -21,6 +21,7 @@
        <ul>
            <li><a href="index.php"> Home</a></i></li>
            <li><a href="about.html"> About us</a></li>
+           <li><a href="about.html"> Learning center</a></li>
            <li id="logout"><a href="../include/logout.php" >Logout</a></li>
        </ul>
     </div>

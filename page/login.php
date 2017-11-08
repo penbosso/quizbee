@@ -32,7 +32,7 @@ if(isset($_POST['signup'])){
     $user =$user->instantiate($_POST);
     if ($user->save()) {
         $session->message("Welcome! you have successfully signed up");
-        redirect_to("index.html");
+        redirect_to("index.php");
     } else {
         $session->message("<br />"." unable to sign you up");
         redirect_to("");
