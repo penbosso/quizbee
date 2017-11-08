@@ -2,7 +2,7 @@
     <div class="centre_pane">
         <div id='container'>
 			<div id='title'>
-				<h1> Science And Technology </h1>
+				<h1> Web Technology </h1>
 			</div>
 			  <div id='quiz'>
 				  <form action="gen1.php" method="post" id="scoreform">
@@ -25,5 +25,5 @@
             </tr>
         </table>
     </div>
-    <script  src="../js/science.js"></script>
+    <script  src="../js/webtech.js"></script>
 <?php include('../include/footer.php'); ?>

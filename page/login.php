@@ -13,7 +13,9 @@ if (isset($_POST['login'])){//FORM SUBMITTED
 	$found_user = User::authenticate($username,$password);
 
 	if($found_user){
-		$session->login($found_user);
+        $session->login($found_user);
+        $sql = "UPDATE user SET status ='online' WHERE id = '$found_user->id'";
+        $database->query($sql);
 		log_action('Login',"{$found_user->username} logged in");
 		redirect_to("index.php");
 	}else{
@@ -54,7 +56,7 @@ if(isset($_POST['signup'])){
                     <input type="text" name="username" value="" placeholder="Username" required class="signinput" />
                     <input type="password" name="password" value="" placeholder="Password" class="signinput" required />
                     <input type="submit" name="login" value="Login" id="btnsignin" />
-                    <button id="newuser" onclick="document.getElementById('signup').style.display='block'">New User</button>
+                    <button type="button" id="newuser" onclick="document.getElementById('signup').style.display='block'">New User</button>
                 </form>
             </div>
         </div>

@@ -5,27 +5,27 @@
            {
            	question:" Who was Stan Laurels partner ?",
            	choices:["Oliver Hardy","Sean Morley","Matt Morgan","Bruno Augustus"],
-           	correctAnswer:1
+           	correctAnswer:0
            },
            {
            	question:" What animal would you find in a form ?",
            	choices:["Hare","Goat","Pig","Tiger"],
-           	correctAnswer:1
+           	correctAnswer:0
            },
            {
            	question:" What plant does the Colorado beetle attack ?",
            	choices:["beans","orange","potato","banana"],
-           	correctAnswer:3
+           	correctAnswer:2
            },
            {
            	question:" La Giaconda is better known as what ?",
            	choices:["Mona Lisa","Vladmir Putin","Afonisa","Pamela"],
-           	correctAnswer:3
+           	correctAnswer:2
            },
             {
            	question:"  What kind of food is Cullan Skink  ?",
            	choices:["corn","beef","pork","fish"],
-           	correctAnswer:4
+           	correctAnswer:3
            }
            
 		];
@@ -50,24 +50,6 @@
             displayNext();
           }
         });
-        
-        $('#prev').on('click', function (e) {
-          e.preventDefault();
-       
-          choose();
-          questionCounter--;
-          displayNext();
-        });
-        
-        $('#start').on('click', function (e) {
-          e.preventDefault();
-         
-          questionCounter = 0;
-          selections = [];
-          displayNext();
-          $('#start').hide();
-        });
-        
     
         function createQuestionElement(index) {
           var qElement = $('<div>', {
@@ -124,17 +106,17 @@
               }
               
               if(questionCounter === 1){
-                $('#prev').show();
+                
               } else if(questionCounter === 0){
                 
-                $('#prev').hide();
+                
                 $('#next').show();
               }
             }else {
               var scoreElem = displayScore();
               quiz.append(scoreElem).fadeIn();
+              $('#submitScore').show();
               $('#next').hide();
-              $('#prev').hide();
               $('#start').show();
             }
           });

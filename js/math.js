@@ -42,24 +42,6 @@
             displayNext();
           }
         });
-        
-        $('#prev').on('click', function (e) {
-          e.preventDefault();
-       
-          choose();
-          questionCounter--;
-          displayNext();
-        });
-        
-        $('#start').on('click', function (e) {
-          e.preventDefault();
-         
-          questionCounter = 0;
-          selections = [];
-          displayNext();
-          $('#start').hide();
-        });
-        
     
         function createQuestionElement(index) {
           var qElement = $('<div>', {
@@ -116,18 +98,19 @@
               }
               
               if(questionCounter === 1){
-                $('#prev').show();
+        
               } else if(questionCounter === 0){
                 
-                $('#prev').hide();
+        
                 $('#next').show();
               }
             }else {
               var scoreElem = displayScore();
               quiz.append(scoreElem).fadeIn();
+              
               $('#next').hide();
-              $('#prev').hide();
               $('#start').show();
+              $('#submitScore').show();
             }
           });
         }

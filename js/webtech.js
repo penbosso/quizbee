@@ -1,64 +1,34 @@
 (function() {
-    
-    var ScienceAndTech=[
-             
-        {
-            question:"Which of the following is a non metal that remains liquid at room temperature?",
-            choices:["Phosphorous","Bromine","Chlorine","Helium"],
-            correctAnswer:1
-        },
-        {
-        question:"Chlorophyll is a naturally occurring chelate compound in which central metal is",
-        choices:["copper","magnesium","iron","calcium"],
-        correctAnswer:1	
-        },
-        {
-            question:"Which of the following is used in pencils?",
-            choices:["Graphite","Silicon","Charcoal","Phosphorous"],
-            correctAnswer:0	
-            
-        },
-        {
-            question:"Which of the following metals forms an amalgam with other metals?",
-            choices:["Tin","Mercury","Lead","Zinc"],
-            correctAnswer:1		
-        },
-        {
-            question:"Chemical formula for water is",
-            choices:["NaAlO2","H2O","Al2O3","CaSiO3"],
-            correctAnswer:1
-        },
-        {
-            question:"The gas usually filled in the electric bulb is",
-            choices:["nitrogen","hydrogen","carbon dioxide","oxygen"],
-            correctAnswer:0
-        },
-        {
-        question:"Washing soda is the common name for",
-        choices:["Sodium carbonate","Calcium bicarbonate","Sodium bicarbonate","Calcium carbonate"],
-        correctAnswer:0	
-            
-        },
-        {
-            question:"Quartz crystals normally used in quartz clocks etc. is chemically",
-            choices:["silicon dioxide","germanium oxide","a mixture of germanium oxide and silicon dioxide","sodium silicate"],
-            correctAnswer:0		
+
         
+        var Web_Tech=[
+            {
+                question:"Which of the following options is correct with regard to HTML? It is..",
+                choices:[" a modelling language","a DTP language"," a partial programming language","  used to structure documents"],
+                answer:3
             },
             {
-                question:"Which of the gas is not known as green house gas?",
-                choices:["Methane","Nitrous Oxide","Carbon dioxide","Hydrogen"],
-                correctAnswer:3
+                question:"What would be the colours of the RGB where the hexadecimal values are #FF0000, #00FF00 and  #0000FF respectively?",
+            
+                choices:["Blue, Green, Red","Green, Blue, Red"," Green, Red, Blue",") Red, Green, Blue"],
+                answer:3
             },
             {
-                question:"Bromine is a",
-                choices:["black solid","red liquid","colourless gas","highly inflammable gas"],
-                correctAnswer:1
-            
-                
-        
+                question:"Which property does one use to align text to the right side of a block-level element in Cascading Style Sheets?",
+                choices:["text-align","justify","block-align","align"],
+                answer:0
+            },
+            {
+                question:"What method is used to specify a container's layout in JSP?",
+                choices:["setLayout()"," Layout()","setContainerLayout()"," ContainerLayout()"],
+                answer:0
+            },
+            {
+                question:"What value does readLine() return when it has reached the end of a file in JSP?",
+                choices:[" Last character in the file","False","Null","True"],
+                answer:2
             }
-           ];
+            ]
         
         var questionCounter = 0; 
         var selections = []; 
@@ -80,6 +50,7 @@
             displayNext();
           }
         });
+        
     
         function createQuestionElement(index) {
           var qElement = $('<div>', {
@@ -89,7 +60,7 @@
           var header = $('<h2>Question ' + (index + 1) + ':</h2>');
           qElement.append(header);
           
-          var question = $('<p>').append(ScienceAndTech[index].question);
+          var question = $('<p>').append(Web_Tech[index].question);
           qElement.append(question);
           
           var radioButtons = createRadios(index);
@@ -102,10 +73,10 @@
           var radioList = $('<ul>');
           var item;
           var input = '';
-          for (var i = 0; i < ScienceAndTech[index].choices.length; i++) {
+          for (var i = 0; i < Web_Tech[index].choices.length; i++) {
             item = $('<li>');
             input = '<input type="radio" name="answer" value=' + i + ' />';
-            input += ScienceAndTech[index].choices[i];
+            input += Web_Tech[index].choices[i];
             item.append(input);
             radioList.append(item);
           }
@@ -122,13 +93,13 @@
             
             var numCorrect = 0;
             for (var i = 0; i < selections.length; i++) {
-              if (selections[i] === ScienceAndTech[i].correctAnswer) {
+              if (selections[i] === Web_Tech[i].correctAnswer) {
                 numCorrect++;
               }
             }
             $('#score_box').val(numCorrect*20);
                 
-            if(questionCounter < ScienceAndTech.length){
+            if(questionCounter < Web_Tech.length){
               var nextQuestion = createQuestionElement(questionCounter);
               quiz.append(nextQuestion).fadeIn();
               if (!(isNaN(selections[questionCounter]))) {
@@ -146,7 +117,7 @@
               var scoreElem = displayScore();
               quiz.append(scoreElem).fadeIn();
               $('#submitScore').show();
-              $('#next').hide();      
+              $('#next').hide();
               $('#start').show();
             }
           });
@@ -157,13 +128,13 @@
           
           var numCorrect = 0;
           for (var i = 0; i < selections.length; i++) {
-            if (selections[i] === ScienceAndTech[i].correctAnswer) {
+            if (selections[i] === Web_Tech[i].correctAnswer) {
               numCorrect++;
             }
           }
           
           score.append('You got ' + numCorrect + ' questions out of ' +
-                       ScienceAndTech.length + ' right!!!');
+                       Web_Tech.length + ' right!!!');
           return score;
         }
       })();

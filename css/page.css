@@ -1,15 +1,17 @@
 body{
     color: white;
+    max-width: 100%;
 }
 hi{
     color: #fff;
 }
 
 .header {
-    height: 100px;
+    height: 10%;
     width: 100%;
     text-align: center;
     background-color: #990033;
+    padding: 1%;
     
 }
 .header ul {
@@ -40,7 +42,7 @@ hi{
 }
 
 .left_pane {
-    height: 540px;
+    height: 88%;
     width: 20%;
     text-align: center;
     background-color: #990033;
@@ -48,7 +50,7 @@ hi{
 }
 
 .centre_pane {
-    height: 540px;
+    height: 88%;
     width: 60%;
     text-align: center;
     background-color: #fff;
@@ -56,22 +58,26 @@ hi{
 }
 
 .right_pane {
-    height: 540px;
+    height: 88%;
     width: 20%;
     text-align: center;
     background-color: #990033;
-    float: left;
+    float: right;
+    
 }
 
 .footer {
     clear: both;
-    height: 50px;
+    height: 10%;
     width: 100%;
     text-align: center;
     background-color: #990033;
+    padding-top: 16px;
 }
 
-
+#title {
+    margin: 0px;
+}
 
 /* #time {
     float: left;
@@ -104,6 +110,21 @@ nav ul {
     padding-top: -30px;
     margin-top: 3%;
 } */
+#know {
+    background-color: #990033;
+     float: center;
+    text-align: justify;
+    width: 95%;
+    clear: both;
+    padding: 1% 2%;
+    opacity: 0.8;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 95%;
+}
 #logout {
     float: right;
 }

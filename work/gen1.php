@@ -5,12 +5,12 @@
 				<h1> General Knowledge 1 </h1>
 			</div>
 			  <div id='quiz'>
-				  <form action="gen1.php" method="post">
+				  <form action="gen1.php" method="post" id="scoreform">
 					  <p>Score:<input name="highscore" id="score_box" readonly/></p>
 					</form>
 				</div>
     		<button class='' id='next'>Next</a></button>
-    		<button class='' id='start'> Start Over</a></button>
+    		<button class='' id='start' type="button"> Start Over</a></button>
     	</div>
     </div>
     <div class="right_pane">

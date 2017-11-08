@@ -5,27 +5,27 @@
        {
          question:" If you had pogonophobia what would you be afraid of ? ",
          choices:["Women","Pubic hair","Beard","Rabbits"],
-         correctAnswer:4
+         correctAnswer:3
        },
        {
             question:"Which company is owned by Bill Gates?",
             choices:["Microsoft","Kellogs","Nissan","Benz"],
-            correctAnswer:1
+            correctAnswer:0
        },
        {
            question:" What kind of animal is a lurcher? ",
            choices:["cats","dogs","pigs","ants"],
-           correctAnswer:2
+           correctAnswer:1
        },
        {
            question:" Who discovered radium ?",
            choices:["The Curries","Spirit Squad","The highlanders"],
-           correctAnswer:1
+           correctAnswer:0
        },
        {
          question:" Who in books and films was the man of bronze ?",
          choices:["Mav Lucci","Bill Gates","Doc Savage","John HUdges"],
-         correctAnswer:3
+         correctAnswer:2
        }
        ];
     
@@ -50,30 +50,13 @@
       }
     });
     
-    $('#prev').on('click', function (e) {
-      e.preventDefault();
-   
-      choose();
-      questionCounter--;
-      displayNext();
-    });
-    
-    $('#start').on('click', function (e) {
-      e.preventDefault();
-     
-      questionCounter = 0;
-      selections = [];
-      displayNext();
-      $('#start').hide();
-    });
-    
 
     function createQuestionElement(index) {
       var qElement = $('<div>', {
         id: 'question'
       });
       
-      var header = $('<h2>Question ' + (index + 1) + ':</h2>');
+      var header = $('<h3>Question ' + (index + 1) + ':</h3>');
       qElement.append(header);
       
       var question = $('<p>').append(General_Knowledge[index].question);
@@ -123,17 +106,17 @@
           }
           
           if(questionCounter === 1){
-            $('#prev').show();
+            
           } else if(questionCounter === 0){
             
-            $('#prev').hide();
+            
             $('#next').show();
           }
         }else {
           var scoreElem = displayScore();
           quiz.append(scoreElem).fadeIn();
+          $('#submitScore').show();
           $('#next').hide();
-          $('#prev').hide();
           $('#start').show();
         }
       });

@@ -74,7 +74,6 @@ if(isset($_POST['signup'])){
                 </p>
 
             </div>
-            
             <div class="signup" id="signup">
                 <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal"><h1>&times;</h1></span>
                     <form action="login.php" method="post" name="signup_form">
