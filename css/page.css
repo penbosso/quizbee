@@ -1,6 +1,16 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
 body{
     color: white;
     max-width: 100%;
+    
 }
 hi{
     color: #fff;
@@ -11,7 +21,8 @@ hi{
     width: 100%;
     text-align: center;
     background-color: #990033;
-    padding: 1%;
+    padding: 1% auto;
+    padding-top:1%;
     
 }
 .header ul {
@@ -60,6 +71,8 @@ hi{
 .right_pane {
     height: 88%;
     width: 20%;
+    max-width: 20%;
+    overflow-x: auto;
     text-align: center;
     background-color: #990033;
     float: right;
@@ -84,6 +97,43 @@ hi{
     margin-left: 50%;
 } */
 
+.userSettings{
+    margin-bottom: 20px;
+}
+
+.chat {
+    max-width: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.chat #chatOutput {
+    overflow-y: scroll;
+    height: 280px;
+    width: 100%;
+    border: 1px solid #777;
+}
+
+.chat #chatOutput p{
+    margin:0;
+    padding:5px;
+    background-color: #eaeaea;
+    border-bottom: 1px solid #bbb;
+    word-break: break-all;
+}
+
+.chat #chatInput {
+    width: 75%;
+    background-color: #fff
+}
+
+.chat #chatSend {
+    width: 25%;
+}
+#chatOutput p {
+    color: blue;
+}
 
 
 
@@ -111,7 +161,9 @@ nav ul {
     margin-top: 3%;
 } */
 #know {
-    background-color: #990033;
+    
+    align-items: center;
+    background-color: #b81249;
      float: center;
     text-align: justify;
     width: 95%;
@@ -144,11 +196,11 @@ nav ul {
     padding-top: -30px;
 }
 
-#about {
+/* #about {
     margin-top: -40px;
     margin-left: 750px;
     padding-top: -30px;
-}
+} */
 
 a:link {
     color: white;
@@ -163,14 +215,22 @@ a:hover {
 #leadership {
     font-style: italic;
     text-align: center;
-    margin-left: 50px;
-    float: right;
+    padding: auto;
     color: #C38D9E;
+    font-size: 24px
+}
+table th {
+    text-align: center;
 }
 
 table {
     border: 4px solid greenyellow;
-    margin-left: 20px;
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+table td{
+    padding: 4px;
 }
 .vertical-menu {
     width: 200px; 
@@ -184,13 +244,10 @@ table {
 }
 
 .vertical-menu a:hover {
-    background-color: #fccdd3;
-    color: greenyellow;
+    background-color: greenyellow;
 }
 
-.vertical-menu a.active { 
-    color:  greenyellow;
-}
+
 .dropdown {
     float: left;
     overflow: hidden;
@@ -206,16 +263,17 @@ table {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #fccdd3;
+    background-color: greenyellow;;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #2ee728;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    
 }
 
 .dropdown-content a {
@@ -228,9 +286,34 @@ table {
 }
 
 .dropdown-content a:hover {
-    background-color: #f9f9f9;;
+    background-color: #af2626;;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+#online { 
+    width:1%;
+    padding:10px 11px;
+    margin:0 auto;
+    border-radius:25px;
+    background-color:rgb(32, 230, 32);
+}
+#offline { 
+    width:1%;
+    padding:10px 11px;
+    margin:0 auto;
+    border-radius:100%;
+    background-color:rgb(224, 233, 224);
+}
+
+.img {
+    background-position: center;
+    background-size: cover;
+    background-image: url("ehud-neuhaus-191867.jpg");
+    min-height: 100%;
+}
+.bar .btn {
+    padding: 16px;
 }

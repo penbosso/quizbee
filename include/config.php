@@ -4,4 +4,6 @@
  define("DB_PASS","")? null : define("DB_PASS","");
  define("DB_NAME","user_db")? null : define("DB_NAME","user_db");
 
+ define("BASE_APP_URL","http://365d7dd2.ngrok.io")? null : define("BASE_APP_URL","http://365d7dd2.ngrok.io");
+
 ?>  

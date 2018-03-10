@@ -50,7 +50,7 @@ if(isset($_POST['signup'])){
     </head>
     <body>
         <div class="top">
-            <h1 id="logo_txt">Quizbee</h1>
+            <h1 id="logo_txt">IMPULSE</h1>
             <div class="login">
                 <form action="login.php" method="post">
                     <input type="text" name="username" value="" placeholder="Username" required class="signinput" />
@@ -62,7 +62,7 @@ if(isset($_POST['signup'])){
         </div>
         <div class="contain">
             <div class="content">
-                <?php echo output_message($message); ?>
+                <?php echo output_message($session->message); ?>
             </div>
             <div id="know">
                 <h2><em>Do You Know?</em><br> The 10 Benefits benefits of quizzes and tests in educational practice<b>!!</b> </h2>
@@ -101,7 +101,14 @@ if(isset($_POST['signup'])){
                                 <td>Confirm password:</td><td> <input type="password" name="confirmpwd" id="confirmpwd" class="signupinput" required/></td>
                             </tr>
                             <tr>
-                                <td colspan="2"><input type="submit" name="signup" value="Sign up" id="btnsignup"/></td><td></td>
+                                <td colspan="2"><input type="submit" name="signup" value="Sign up" id="btnsignup" 
+                                onclick="return validateForm(this.form,
+                               this.form.username,
+                               this.form.email,
+                               this.form.password,
+                               this.form.confirmpwd,
+                               this.form.first_name,
+                               this.form.last_name);" /></td><td></td>
                             </tr>
                         </table>                        
                     </form>
@@ -109,5 +116,6 @@ if(isset($_POST['signup'])){
         </div>
 
         </div>
+    <script  src="../js/valid.js"></script>
     </body>
 </html>
